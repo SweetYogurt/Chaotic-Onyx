@@ -231,6 +231,8 @@
 	name = "Rescue Base"
 	landmark_tag = "nav_rescue_start"
 	docking_controller = "rescue_base"
+	base_area = /area/rescue_base/base
+	base_turf = /turf/unsimulated/floor/rescue_base
 
 /obj/effect/shuttle_landmark/rescue/internim
 	name = "In transit"
@@ -448,21 +450,21 @@
 	name = "Deathsquad"
 	warmup_time = 10
 	location = 0
-	shuttle_area = /area/shuttle/specops/centcom
+	shuttle_area = /area/shuttle/deathsquad/centcom
 	dock_target = "deathsquad_shuttle_port"
 	landmark_transition = "nav_deathsquad_transition"
 	waypoint_station = "nav_deathsquad_centcom"
 	waypoint_offsite = "nav_deathsquad_station"
 
-/obj/effect/shuttle_landmark/deathsquad/internim
-	name = "In transit"
-	landmark_tag = "nav_deathsquad_transition"
-	autoset = 0
-
 /obj/effect/shuttle_landmark/deathsquad/centcom
 	name = "Centcom"
 	landmark_tag = "nav_deathsquad_centcom"
 	docking_controller = "deathsquad_centcom_dock"
+	autoset = 0
+
+/obj/effect/shuttle_landmark/deathsquad/internim
+	name = "In transit"
+	landmark_tag = "nav_deathsquad_transition"
 	autoset = 1
 
 /obj/effect/shuttle_landmark/deathsquad/station

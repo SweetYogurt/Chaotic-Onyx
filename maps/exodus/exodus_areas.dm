@@ -65,21 +65,16 @@
 /area/shuttle/mining/station
 	icon_state = "shuttle2"
 
-/area/shuttle/specops/centcom
-	name = "\improper Special Ops Shuttle"
-	area_flags = AREA_FLAG_RAD_SHIELDED
-
-/area/shuttle/specops/station
-	name = "Station dock"
-	area_flags = AREA_FLAG_RAD_SHIELDED
-
 /area/shuttle/deathsquad/centcom
 	name = "Deathsquad Shuttle"
 	area_flags = AREA_FLAG_RAD_SHIELDED
 
-/area/shuttle/deathsquad/station
-	name = "Deathsquad Shuttle"
+/area/shuttle/deathsquad/transit
+	name = "Deathsquad Shuttle Internim"
 	area_flags = AREA_FLAG_RAD_SHIELDED
+
+/area/shuttle/deathsquad/station
+	name = "Deathsquad Shuttle Station"
 
 /area/shuttle/administration
 	area_flags = AREA_FLAG_RAD_SHIELDED
@@ -216,7 +211,6 @@
 /area/rescue_base/start
 	name = "\improper Response Team Base"
 	icon_state = "shuttlered"
-	base_turf = /turf/unsimulated/floor/rescue_base
 
 /area/rescue_base/southwest
 	name = "south-west of SS13"
@@ -241,15 +235,6 @@
 /area/rescue_base/south
 	name = "south of SS13"
 	icon_state = "south"
-
-/area/rescue_base/commssat
-	name = "west of the communication satellite"
-	icon_state = "west"
-
-/area/rescue_base/mining
-	name = "northeast of the engineering station"
-	icon_state = "northeast"
-	base_turf = /turf/simulated/floor/asteroid
 
 /area/rescue_base/arrivals_dock
 	name = "docked with station"
@@ -296,19 +281,6 @@
 /area/syndicate_station/south
 	name = "south of SS13"
 	icon_state = "south"
-
-/area/syndicate_station/commssat
-	name = "south of the communication satellite"
-	icon_state = "south"
-
-/area/syndicate_station/mining
-	name = "northeast of the mining station"
-	icon_state = "north"
-	base_turf = /turf/simulated/floor/asteroid
-
-/area/syndicate_station/arrivals_dock
-	name = "docked with station"
-	icon_state = "shuttle"
 
 /area/syndicate_station/transit
 	name = "\proper bluespace"
@@ -432,6 +404,14 @@
 /area/maintenance/ghetto_casino
     name = "\improper Ghetto Casino"
     icon_state = "ghettocasino"
+
+/area/maintenance/ghetto_dock
+    name = "\improper Ghetto Dock"
+    icon_state = "ghettodock"
+
+/area/maintenance/ghetto_shuttle
+    name = "\improper Ghetto Shuttle"
+    icon_state = "ghettoshuttle"
 
 /area/maintenance/underground/central_one
 	name = "\improper Underground Central Primary Hallway SE"
@@ -907,7 +887,6 @@
 /area/crew_quarters
 	name = "\improper Dormitories"
 	icon_state = "Sleep"
-	area_flags = AREA_FLAG_RAD_SHIELDED
 
 /area/crew_quarters/locker
 	name = "\improper Locker Room"

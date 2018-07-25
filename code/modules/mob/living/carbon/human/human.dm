@@ -960,7 +960,7 @@
 	set src in view(1)
 	var/self = 0
 
-	if(usr.stat || usr.restrained() || !isliving(usr)) return
+	if(usr.stat || usr.restrained() || !isliving(usr) || !ishuman(usr)) return
 
 	if(usr == src)
 		self = 1
@@ -1447,9 +1447,10 @@
 
 /mob/living/carbon/human/need_breathe()
 	if(species.breathing_organ && should_have_organ(species.breathing_organ))
-		return 1
-	else
-		return 0
+		if(does_not_breathe == 0)
+			return 1
+		else
+			return 0
 
 /mob/living/carbon/human/get_adjusted_metabolism(metabolism)
 	return ..() * (species ? species.metabolism_mod : 1)
